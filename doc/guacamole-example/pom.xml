@@ -37,6 +37,17 @@
     <build>
         <plugins>
 
+            <!-- <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/myapp</path>
+                </configuration>
+            </plugin> -->
+
             <!-- Written for Java 1.8 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -70,12 +81,11 @@
             </plugin>
 
             <!-- Verify format using Apache RAT -->
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
                 <version>0.13</version>
 
-                <!-- Bind RAT to validate phase -->
                 <executions>
                     <execution>
                         <id>validate</id>
@@ -86,7 +96,7 @@
                     </execution>
                 </executions>
 
-            </plugin>
+            </plugin> -->
 
         </plugins>
 
@@ -97,8 +107,8 @@
         <!-- Servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
 
